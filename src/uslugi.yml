@@ -1,0 +1,17 @@
+#ID uslugi musi sie zgadzac z nazwa kolumny.
+#W nastepnej wersji moze to byc zmienione.
+#Aktualna wersja: 0.1.5
+configVersion: 0.1.5
+
+uslugi:
+  Vip:
+    nazwaWys: '&6Vip'
+    cena: 4,92 zl
+    waznosc: Na Jedna Edycje
+    tresc: TRESC
+    sms: 0000
+    komendy:
+    - pex user {PLAYER} group set vip
+    - pex reload
+    material: DIAMOND_BLOCK
+    idUslugi: Vip

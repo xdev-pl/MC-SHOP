@@ -1,0 +1,8 @@
+name: MC-SHOP
+version: 0.1.5
+main: pro.lvlup.mcshop.Main
+description: Plugin na sklep, napisany dla forum.lvlup.pro
+author: luxDev
+website: http://forum.lvlup.pro/
+commands:
+  sklep:
