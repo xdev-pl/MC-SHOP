@@ -16,6 +16,7 @@ import pro.lvlup.mcshop.basic.GuiItem;
 import pro.lvlup.mcshop.basic.Service;
 import pro.lvlup.mcshop.basic.ServiceManager;
 import pro.lvlup.mcshop.managers.GuiManager;
+import pro.lvlup.mcshop.nms.OpenSignEditor;
 import pro.lvlup.mcshop.utils.Utils;
 
 public class InventoryListener implements Listener {
@@ -37,9 +38,9 @@ public class InventoryListener implements Listener {
 			if (service == null) {
 				e.setCancelled(true);
 				p.closeInventory();
-				p.sendMessage("§8§m-------------------§7[§6ITEMSHOP§7]§8§m-------------------");
-				p.sendMessage("§8» §cID uslugi w uslugi.yml musi sie zgadzac z nazwa kolumny - Zglos sie do administratora");
-				p.sendMessage("§8§m-------------------§7[§6ITEMSHOP§7]§8§m-------------------");
+				p.sendMessage("&8&m-------------------&7[&6ITEMSHOP&7]&8&m-------------------");
+				p.sendMessage("&8& &cID uslugi w uslugi.yml musi sie zgadzac z nazwa kolumny - Zglos sie do administratora");
+				p.sendMessage("&8&m-------------------&7[&6ITEMSHOP&7]&8&m-------------------");
 			}
 			ServiceManager.service.put(p.getPlayer(), service.getName());
 			Location newSign = p.getLocation().add(0, 100, 0);
@@ -53,11 +54,11 @@ public class InventoryListener implements Listener {
 				signBlock.setLine(0, "");
 				signBlock.setLine(1, Utils.fixColor("&4^ WPISZ KOD ^"));
 				signBlock.setLine(2, Utils.fixColor("&7ABY ZAKUPIC"));
-				signBlock.setLine(3, Utils.fixColor("&a§n" + service.getName().toUpperCase()));
+				signBlock.setLine(3, Utils.fixColor("&a&n" + service.getName().toUpperCase()));
 				signBlock.update();
 				new BukkitRunnable() {
 					public void run() {
-						Utils.openGui(p, signBlock);
+						OpenSignEditor.openSignEditor(p, signBlock);
 					}
 				}.runTaskLaterAsynchronously(Main.getInst(), 3);
 			}

@@ -24,7 +24,7 @@ public class SignChangeListener implements Listener {
 			String kod = e.getLine(0);
 			if (e.getLine(0).isEmpty()) {
 				for (String s : Config.SERVICE$LINE$EMPTY) {
-					s = StringUtils.replace(s, "&", "ง");
+					s = StringUtils.replace(s, "&", "ยง");
 					p.sendMessage(s);
 				}
 				e.getBlock().setType(Material.AIR);

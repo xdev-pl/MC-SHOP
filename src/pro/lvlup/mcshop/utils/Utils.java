@@ -88,9 +88,9 @@ public class Utils {
 	      Reflections.setDeclaredField(tileEntity, "isEditable", true);
 	      Reflections.setDeclaredField(tileEntity, Reflections.ver().startsWith("v1_7") ? "k" : "h", Reflections.getHandle(p));
 	      if(Reflections.ver().startsWith("v1_7")){
-	    	  Reflections.sendPacket(p,  Reflections.getPacket("PacketPlayOutOpenSignEditor", s.getX(), s.getY(), s.getZ()));
+	    	  Reflections.sendPacket(p,  Reflections.getPacket("OpenSignEditor", s.getX(), s.getY(), s.getZ()));
 	      }else{
-	    	  Reflections.sendPacket(p,  Reflections.getPacket("PacketPlayOutOpenSignEditor", Reflections.callDeclaredConstructor(Reflections.getNMSClass("BlockPosition"), s.getX(), s.getY(), s.getZ())));
+	    	  Reflections.sendPacket(p,  Reflections.getPacket("OpenSignEditor", Reflections.callDeclaredConstructor(Reflections.getNMSClass("BlockPosition"), s.getX(), s.getY(), s.getZ())));
 	      }
 	}
 	public static String getEngineVersion(){

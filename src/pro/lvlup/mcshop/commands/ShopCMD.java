@@ -69,7 +69,7 @@ public class ShopCMD implements CommandExecutor {
 					Utils.fixColor("&8» &7Waznosc Uslugi: &3" + service.getDays()),
 					Utils.fixColor("&8» &7Tresc Sms'a: &3" + service.getSmsText()),
 					Utils.fixColor("&8» &7Numer Sms'a: &3" + service.getSmsNumber()),
-					Utils.fixColor("&8» &7Kupiono dzisiaj razy:&3 " + service.getBoughtAmount())));
+					Utils.fixColor("&8» &7Zakupiono dzisiaj razy:&3 " + service.getBoughtAmount())));
 			item.setItemMeta(itemMeta);
 			itemStacks.add(item);
 			inv.setItem(i, item);
